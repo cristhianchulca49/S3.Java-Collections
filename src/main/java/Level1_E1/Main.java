@@ -6,7 +6,7 @@ import java.util.Iterator;
 import java.util.List;
 
 public class Main {
-    static void main() {
+    static void main(String[] args) {
         List<Month> year = new ArrayList<>();
 
         year.add(new Month("January"));
