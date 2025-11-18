@@ -24,4 +24,10 @@ public class Month {
         return this.name.equals(month.name);
     }
 
+    @Override
+    public int hashCode() {
+        return name.hashCode();
+    }
+
+
 }
