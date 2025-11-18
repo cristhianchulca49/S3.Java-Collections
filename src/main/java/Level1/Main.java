@@ -32,5 +32,13 @@ public class Main {
         System.out.println("-----------");
 
         HashSet<Month> yearHashSet = new HashSet<>(year);
+        yearHashSet.add(new Month("January"));
+
+        Iterator<Month> it = yearHashSet.iterator();
+        while (it.hasNext()) {
+            Month m = it.next();
+            System.out.println(m.getName());
+        }
+    }
 }
 
