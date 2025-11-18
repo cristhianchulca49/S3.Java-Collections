@@ -24,6 +24,12 @@ public class Main {
             System.out.println(m.getName());
         }
         System.out.println("-----------");
+
+        year.add(7, new Month("August"));
+        for (Month m : year) {
+            System.out.println(m.getName());
+        }
+        System.out.println("-----------");
     }
 }
 
