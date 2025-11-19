@@ -22,4 +22,10 @@ public class Input {
         }
         return mapCountries;
     }
+
+    public static String readString(String message) {
+        sc = new Scanner(System.in);
+        System.out.print(message);
+        return sc.nextLine();
+    }
 }
