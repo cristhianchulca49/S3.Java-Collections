@@ -6,15 +6,15 @@ import java.util.HashMap;
 import java.util.Scanner;
 
 public class Input {
-    private static Scanner sc;
+    private static Scanner sc = new Scanner(System.in);
 
     public static HashMap<String, String> readDocument(String pathname) {
         HashMap<String, String> mapCountries = new HashMap<>();
         try {
-            sc = new Scanner(new File(pathname));
-            while (sc.hasNext()) {
-                String country = sc.next();
-                String capital = sc.next();
+            Scanner scDocument = new Scanner(new File(pathname));
+            while (scDocument.hasNext()) {
+                String country = scDocument.next().replace("_", " ");
+                String capital = scDocument.next().replace("_", " ").replace("-", " ");
                 mapCountries.put(country, capital);
             }
         } catch (FileNotFoundException e) {
@@ -24,8 +24,7 @@ public class Input {
     }
 
     public static String readString(String message) {
-        sc = new Scanner(System.in);
         System.out.print(message);
-        return sc.nextLine();
+        return sc.nextLine().trim();
     }
 }
