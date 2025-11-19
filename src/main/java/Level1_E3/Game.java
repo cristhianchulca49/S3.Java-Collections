@@ -17,8 +17,7 @@ public class Game {
         List<String> countriesList = new ArrayList<>(countries.keySet());
         Collections.shuffle(countriesList);
         for (int i = 0; i < 10; i++) {
-            int random = (int) (Math.random() * countries.size());
-            String country = countriesList.get(random);
+            String country = countriesList.get(i);
             String answer = Input.readString("Guess the capital of : " + country);
             if (answer.equalsIgnoreCase(countries.get(country))) {
                 System.out.println("correct!!");
