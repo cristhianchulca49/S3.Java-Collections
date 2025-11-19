@@ -31,8 +31,8 @@ public class Year {
     public void printYear() {
         for (Month m : year) {
             System.out.println(m.getName());
-            System.out.println("-----------");
         }
+        System.out.println("-----------");
     }
 
 }
