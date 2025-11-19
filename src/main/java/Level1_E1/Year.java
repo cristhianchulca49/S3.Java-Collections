@@ -23,4 +23,16 @@ public class Year {
     public List<Month> getYear() {
         return year;
     }
+
+    public void setMonth(int i, String month) {
+        year.add(i, new Month(month));
+    }
+
+    public void printYear() {
+        for (Month m : year) {
+            System.out.println(m.getName());
+            System.out.println("-----------");
+        }
+    }
+
 }
